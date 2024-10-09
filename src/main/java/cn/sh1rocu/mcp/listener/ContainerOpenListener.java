@@ -31,7 +31,7 @@ public class ContainerOpenListener implements Listener {
         if (event.getInventory().getType() == InventoryType.LOOM)
             return;
         Location loc = event.getInventory().getLocation();
-        if (loc != null && !event.isCancelled() && mcpInstance.getModList().getList("mods").contains(loc.getBlock().getType().name().split("_")[0])) {
+        if (loc != null && !event.isCancelled() && mcpInstance.getConfig().getStringList("mods").contains(loc.getBlock().getType().name().split("_")[0])) {
             Block block = loc.getBlock();
             Residence resAPI = Residence.getInstance();
             Player player = (Player) event.getPlayer();

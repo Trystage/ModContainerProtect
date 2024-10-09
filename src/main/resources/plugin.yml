@@ -2,7 +2,7 @@ name: ModContainerProtect
 version: '1.0-SNAPSHOT'
 main: cn.sh1rocu.mcp.ModContainerProtect
 api-version: '1.13'
-depend:
+softdepend:
   - Residence
   - ProtocolLib
 commands:

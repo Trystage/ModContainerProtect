@@ -22,7 +22,6 @@ public class MainCommand implements TabExecutor {
             switch (args[0]) {
                 case "reload":
                     mcpInstance.reloadConfig();
-                    mcpInstance.setModList((YamlConfiguration) mcpInstance.getConfig());
                     commandSender.sendMessage("reload successfully");
                     break;
                 default:
