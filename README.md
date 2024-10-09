@@ -18,6 +18,9 @@ When player is opening a container, if the registry name of the mod which this c
 - [MrCrayfish's More Furniture Mod](https://github.com/MrCrayfish/MrCrayfishMoreFurnitureMod) -> MORECFM
 - [Nosiphus Furniture Mod](https://github.com/Nosiphus/nosiphus-furniture-mod) -> NFM
 <br><br>
+### Config File Structure
 ![Config File Structure](https://cdn.modrinth.com/data/cached_images/ace893687e1896b782a0ddc4d6d8f6e6273971ed.png)
-
-
+<br><br>
+### Screenshots:
+![IRONCHEST](https://pic.nanodesu.net/i/2024/10/10/6706cf1643b29.png)
+![NFM](https://pic.nanodesu.net/i/2024/10/10/6706cece4e614.png)
