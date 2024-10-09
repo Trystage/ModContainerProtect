@@ -11,7 +11,7 @@ A plugin which can protect containers in mods from stealing.  Depends on [Reside
 
 ## Config
 When player is opening a container, if the registry name of the mod which this container belongs to, is in config file, plugin will check if player has the Container(Residence plugin's flag) permission of the residence where the container is in, to open the container. So you just need to write the mod's registry name(All Uppercase) into config file.<br><br>
-玩家打开容器时，如果这个容器所属的mod注册名在配置文件中，那么插件会检测玩家是否拥有该容器所在res领地的Container权限，来判断能否打开容器，因此只要将需要检测的mod容器的mod注册名写入配置文件即可。
+玩家打开容器时，如果这个容器所属的mod注册名在配置文件中，那么插件会检测玩家是否拥有该容器所在res领地的Container权限，来判断能否打开容器，因此只要将需要检测的mod容器的mod注册名全部用大写字母写入配置文件即可。
 ### Example:
 - [Iron Chests](https://github.com/progwml6/ironchest) -> IRONCHEST
 - [MrCrayfish's Furniture Mod](https://github.com/MrCrayfish/MrCrayfishFurnitureMod) -> CFM
