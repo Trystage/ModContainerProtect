@@ -46,7 +46,7 @@ public class ContainerOpenListener implements Listener {
                     packet.getBlockPositionModifier().write(0, new BlockPosition(loc.getBlockX(), loc.getBlockY(), loc.getBlockZ()));
                     packet.getBlocks().write(0, block.getType());
                     packet.getIntegers().write(0, 1).write(1, 0);
-                    ModContainerProtect.getInstance().getProtocolManager().sendServerPacket(player, packet);
+                    mcpInstance.getProtocolManager().sendServerPacket(player, packet);
    /*                 //vanilla
                     PacketPlayOutBlockAction packet = new PacketPlayOutBlockAction(
                             new BlockPosition(loc.getX(), loc.getY(), loc.getZ()),
