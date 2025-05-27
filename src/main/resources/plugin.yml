@@ -1,5 +1,5 @@
 name: ModContainerProtect
-version: '1.0-SNAPSHOT'
+version: '1.1'
 main: cn.sh1rocu.mcp.ModContainerProtect
 api-version: '1.13'
 softdepend:
