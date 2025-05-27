@@ -15,8 +15,10 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.event.player.PlayerInteractEvent;
 
 public class ContainerOpenListener implements Listener {
     private static ModContainerProtect mcpInstance;
@@ -27,6 +29,7 @@ public class ContainerOpenListener implements Listener {
 
     @EventHandler
     public void openChestEvent(InventoryOpenEvent event) {
+
         //if player opens a loom, then maybe lag the server in some ticks caused by "event.getInventory().getLocation()"
         if (event.getInventory().getType() == InventoryType.LOOM)
             return;
@@ -56,6 +59,24 @@ public class ContainerOpenListener implements Listener {
                     );
                     ((CraftPlayer) player).getHandle().playerConnection.sendPacket(packet);*/
                 }, 5);
+            }
+        }
+    }
+
+    @EventHandler
+    public void openBlockContainer(PlayerInteractEvent event) {
+        if (event.getAction() != Action.RIGHT_CLICK_BLOCK) return;
+        if (event.getClickedBlock() == null) return;
+        Location loc = event.getClickedBlock().getLocation();
+        if (!event.isCancelled() && mcpInstance.getConfig().getStringList("blocks").contains(loc.getBlock().getType().name())) {
+            Block block = loc.getBlock();
+            Residence resAPI = Residence.getInstance();
+            Player player = event.getPlayer();
+            ClaimedResidence res = resAPI.getResidenceManager().getByLoc(block.getLocation());
+            if (res != null && !player.isOp() &&
+                    !res.getPermissions().playerHas(player, Flags.container, FlagPermissions.FlagCombo.OnlyTrue)) {
+                event.setCancelled(true);
+                player.sendMessage(ChatColor.GREEN + "[" + ChatColor.GOLD + "ModContainerProtect" + ChatColor.GREEN + "]" + ChatColor.RED + "You have no permission to open this container");
             }
         }
     }

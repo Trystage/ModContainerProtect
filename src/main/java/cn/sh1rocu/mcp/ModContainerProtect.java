@@ -48,6 +48,11 @@ public final class ModContainerProtect extends JavaPlugin {
             saveConfig();
             reloadConfig();
         }
+        if (config.get("blocks") == null) {
+            config.set("blocks", new String[]{"APOTHEOSIS_ENCHANTMENT_LIBRARY","APOTHEOSIS_ENDER_LIBRARY"});
+            saveConfig();
+            reloadConfig();
+        }
     }
 
     public static ModContainerProtect getInstance() {
