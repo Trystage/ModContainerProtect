@@ -10,11 +10,11 @@ A plugin which can protect containers in mods from stealing.  Depends on [Reside
   reload config
 
 ## Config
-When player is opening a container, if the registry name of the mod which this container belongs to, is in config file, plugin will check if player has the Container(Residence plugin's flag) permission of the residence where the container is in, to open the container. So you just need to write the mod's registry name(All Uppercase) into config file.<br>
+When player is opening a container, if the mod-id of this container is in config file, plugin will check if player has the Container(Residence plugin's flag) permission of the residence where the container is in, to open the container. So you just need to write the mod-id(All Uppercase) into config file.<br>
 
-Update: Since ver1.1, you can write the block's registry name(All Uppercase) into config file's 'blocks' filed, so that the container of this block can be protected correctly.<br>
+Update: Since ver1.1, you can write the block's registry name(All Uppercase) into config file's 'blocks' field, so that the container of this block can be protected correctly.<br>
 
-玩家打开容器时，如果这个容器所属的mod注册名在配置文件中，那么插件会检测玩家是否拥有该容器所在res领地的Container权限，来判断能否打开容器，因此只要将需要检测的mod容器的mod注册名全部用大写字母写入配置文件即可。<br>
+玩家打开容器时，如果这个容器所属的mod的id在配置文件中，那么插件会检测玩家是否拥有该容器所在res领地的Container权限，来判断能否打开容器，因此只要将需要检测的mod容器的modid全部用大写字母写入配置文件即可。<br>
 
 更新：从1.1版本开始，你可以将容器方块的注册全名写入配置文件中的blocks字段中，从而确保属于这个方块的容器能被正常保护（适用于写入mods字段无效的容器）。
 
