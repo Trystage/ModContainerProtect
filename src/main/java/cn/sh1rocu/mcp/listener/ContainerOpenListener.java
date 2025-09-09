@@ -65,7 +65,6 @@ public class ContainerOpenListener implements Listener {
 
     @EventHandler
     public void openBlockContainer(PlayerInteractEvent event) {
-        if (event.getAction() != Action.RIGHT_CLICK_BLOCK) return;
         if (event.getClickedBlock() == null) return;
         Location loc = event.getClickedBlock().getLocation();
         if (!event.isCancelled() && mcpInstance.getConfig().getStringList("blocks").contains(loc.getBlock().getType().name())) {
