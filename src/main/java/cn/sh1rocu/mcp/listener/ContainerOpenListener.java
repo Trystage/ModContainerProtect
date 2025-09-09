@@ -42,7 +42,7 @@ public class ContainerOpenListener implements Listener {
             if (res != null && !player.isOp() &&
                     !res.getPermissions().playerHas(player, Flags.container, FlagPermissions.FlagCombo.OnlyTrue)) {
                 event.setCancelled(true);
-                player.sendMessage(ChatColor.GREEN + "[" + ChatColor.GOLD + "ModContainerProtect" + ChatColor.GREEN + "]" + ChatColor.RED + "You have no permission to open this container");
+                player.sendMessage(ChatColor.translateAlternateColorCodes('&',mcpInstance.getConfig().getString("message","&a[&6ModContainerProtect&a]&cYou have no permission to open this container")));
                 //delay to send close animation packet
                 Bukkit.getServer().getScheduler().runTaskLater(mcpInstance, () -> {
                     PacketContainer packet = new PacketContainer(PacketType.Play.Server.BLOCK_ACTION);
@@ -76,7 +76,7 @@ public class ContainerOpenListener implements Listener {
             if (res != null && !player.isOp() &&
                     !res.getPermissions().playerHas(player, Flags.container, FlagPermissions.FlagCombo.OnlyTrue)) {
                 event.setCancelled(true);
-                player.sendMessage(ChatColor.GREEN + "[" + ChatColor.GOLD + "ModContainerProtect" + ChatColor.GREEN + "]" + ChatColor.RED + "You have no permission to open this container");
+                player.sendMessage(ChatColor.translateAlternateColorCodes('&',mcpInstance.getConfig().getString("message","&a[&6ModContainerProtect&a]&cYou have no permission to open this container")));
             }
         }
     }
