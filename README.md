@@ -33,3 +33,8 @@ Update: Since ver1.1, you can write the block's registry name(All Uppercase) int
 ![IRONCHEST](https://pic.nanodesu.net/i/2024/10/10/6706cf1643b29.png)
 ![NFM](https://pic.nanodesu.net/i/2024/10/10/6706cece4e614.png)
 ![Some blocks from APOTHEOSIS](https://5pw.net/i/2025/05/27/68354a5d47612.png)
+
+### Build Plugin
+Run ```maven clean install``` / 运行 ```maven clean install```
+Run ```maven package``` / 运行 ```maven package```
+The plugin jar file will be in ```target``` folder / 插件jar文件会在```target```文件夹中
