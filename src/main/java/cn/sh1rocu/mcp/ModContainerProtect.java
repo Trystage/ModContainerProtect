@@ -55,6 +55,8 @@ public final class ModContainerProtect extends JavaPlugin {
         }
         if (config.get("message") == null) {
             config.set("message", "&a[&6ModContainerProtect&a]&cYou have no permission to open this container");
+            saveConfig();
+            reloadConfig();
         }
     }
 
